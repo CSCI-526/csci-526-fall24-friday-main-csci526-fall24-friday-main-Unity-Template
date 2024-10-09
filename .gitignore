@@ -70,3 +70,6 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /Now You See Me/[Aa]ssets/[Ss]treamingAssets/aa.meta
 /Now You See Me/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# MacOS
+.DS_Store
