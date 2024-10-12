@@ -354,6 +354,7 @@
 -analyzer:"D:/马上删/2022.3.43f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/DoorControlLeft.cs"
 "Assets/Scripts/DoorControlRight.cs"
+"Assets/Scripts/ElevatorControl.cs"
 "Assets/Scripts/PlayerMovement.cs"
 -langversion:9.0
 /deterministic
