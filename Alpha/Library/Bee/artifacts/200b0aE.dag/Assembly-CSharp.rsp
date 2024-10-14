@@ -355,10 +355,12 @@
 "Assets/Scripts/DoorControlRight.cs"
 "Assets/Scripts/ElevatorButtonControl.cs"
 "Assets/Scripts/ElevatorControl.cs"
+"Assets/Scripts/GhostAudioController.cs"
 "Assets/Scripts/KeyPickup.cs"
 "Assets/Scripts/PlayerInventory.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/PlayerSanity.cs"
+"Assets/UVLight/setUVLight.cs"
 -langversion:9.0
 /deterministic
 /optimize+
