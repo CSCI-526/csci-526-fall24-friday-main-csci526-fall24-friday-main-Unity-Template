@@ -3312,27 +3312,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &972451389
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 798489969}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.62, y: 2, z: 5.58}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1000419822
 GameObject:
   m_ObjectHideFlags: 0
@@ -5872,11 +5851,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4472766428681192652, guid: deeacc0e844cd48de890566a27008efc, type: 3}
       propertyPath: m_Radius
-      value: 1.85
+      value: 2.32
       objectReference: {fileID: 0}
     - target: {fileID: 4472766428681192652, guid: deeacc0e844cd48de890566a27008efc, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4472766428681192652, guid: deeacc0e844cd48de890566a27008efc, type: 3}
       propertyPath: m_Direction
@@ -5900,7 +5879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5488780219257998316, guid: deeacc0e844cd48de890566a27008efc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.08
+      value: -1.42
       objectReference: {fileID: 0}
     - target: {fileID: 5488780219257998316, guid: deeacc0e844cd48de890566a27008efc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5935,8 +5914,7 @@ PrefabInstance:
       value: Key
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3894732950112361011, guid: deeacc0e844cd48de890566a27008efc, type: 3}
-    - {fileID: 4472766428681192652, guid: deeacc0e844cd48de890566a27008efc, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -5946,9 +5924,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6998416721014765710, guid: deeacc0e844cd48de890566a27008efc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 972451385}
-    - targetCorrespondingSourceObject: {fileID: 6998416721014765710, guid: deeacc0e844cd48de890566a27008efc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 972451389}
   m_SourcePrefab: {fileID: 100100000, guid: deeacc0e844cd48de890566a27008efc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
