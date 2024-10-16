@@ -3470,7 +3470,6 @@ GameObject:
   - component: {fileID: 1043010995}
   - component: {fileID: 1043010994}
   - component: {fileID: 1043010993}
-  - component: {fileID: 1043010997}
   m_Layer: 0
   m_Name: ElevatorDoor
   m_TagString: Untagged
@@ -3585,22 +3584,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043010991}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1043010997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1043010991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d672dbc162f378f45bb64443ad9e9696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorAnimator1: {fileID: 1043010993}
-  player1: {fileID: 0}
-  interactionDistance1: 3
-  autoCloseDelay: 3
 --- !u!1 &1059516353
 GameObject:
   m_ObjectHideFlags: 0
