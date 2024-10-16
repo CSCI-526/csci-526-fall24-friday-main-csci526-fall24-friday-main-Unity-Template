@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class ElevatorButtonControl : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class ElevatorButtonControl : MonoBehaviour
 
     private InverntoryManager inverntoryManager;
 
+    public TMP_Text statusKey;
+
+
     void Start()
     {
         inverntoryManager = GameObject.Find("Inventory").GetComponent<InverntoryManager>();
+       
     }
 
     void Update()
@@ -72,18 +77,28 @@ public class ElevatorButtonControl : MonoBehaviour
     private void OnGUI()
     {
         float distance = Vector3.Distance(player.position, transform.position);
-        PlayerInventory inventory = player.GetComponent<PlayerInventory>();
+        //PlayerInventory inventory = player.GetComponent<PlayerInventory>();
 
         if (distance < interactionDistance)
         {
             if (inverntoryManager.itemCheck("key", 1))
             {
-                GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height - 50, 100, 20), "Press F to use");
+                statusKey.text = "Press F to use";
+                statusKey.enabled = true;
+
+
+                //GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height - 50, 100, 20), "Press F to use");
             }
             else
             {
-                GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height - 50, 100, 20), "You need a key");
+                statusKey.text = "You need a key";
+                statusKey.enabled = true;
+                //GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height - 50, 100, 20), "You need a key");
             }
+        }
+        else
+        {
+            statusKey.enabled = false;
         }
     }
 }

@@ -24,6 +24,8 @@ public class InverntoryManager : MonoBehaviour
             Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             menuActived = false;
+            Cursor.visible = false; // 隐藏光标
+            Cursor.lockState = CursorLockMode.Locked; // 锁定光标在屏幕中央
         }
         //open bp
         else if (Input.GetKeyDown(KeyCode.B) && !menuActived)
@@ -32,6 +34,8 @@ public class InverntoryManager : MonoBehaviour
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActived = true;
+            Cursor.visible = true; // 显示光标
+            Cursor.lockState = CursorLockMode.None; // 允许光标自由移动
 
         }
 
