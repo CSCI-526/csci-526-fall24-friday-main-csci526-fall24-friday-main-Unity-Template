@@ -9,6 +9,13 @@ public class ElevatorButtonControl : MonoBehaviour
 
     private bool isDoorOpen = false;  // Tracks the current state of the elevator door
 
+    private InverntoryManager inverntoryManager;
+
+    void Start()
+    {
+        inverntoryManager = GameObject.Find("Inventory").GetComponent<InverntoryManager>();
+    }
+
     void Update()
     {
         // Calculate the distance between the player and the button
@@ -18,10 +25,10 @@ public class ElevatorButtonControl : MonoBehaviour
         if (distance < interactionDistance)
         {
             // Get the PlayerInventory component from the player
-            PlayerInventory inventory = player.GetComponent<PlayerInventory>();
+            //PlayerInventory inventory = player.GetComponent<PlayerInventory>();
 
             // Check if the player has the key
-            if (inventory != null && inventory.hasKey)
+            if (inverntoryManager.itemCheck("key", 1))
             {
                 // If the player has the key, they can press F to open or close the door
                 if (Input.GetKeyDown(KeyCode.F))
@@ -69,7 +76,7 @@ public class ElevatorButtonControl : MonoBehaviour
 
         if (distance < interactionDistance)
         {
-            if (inventory != null && inventory.hasKey)
+            if (inverntoryManager.itemCheck("key", 1))
             {
                 GUI.Label(new Rect(Screen.width / 2 - 50, Screen.height - 50, 100, 20), "Press F to use");
             }
