@@ -5,6 +5,8 @@ public class DoorControllerRight : MonoBehaviour
     public Animator doorAnimator1;
     public Transform player1;
     public float interactionDistance1 = 3f;
+    private bool doorOpened = false;
+    public JumpOnDoorOpen jumpObjectScript;
 
     void Update()
     {
@@ -18,6 +20,12 @@ public class DoorControllerRight : MonoBehaviour
                 if (doorAnimator1.GetCurrentAnimatorStateInfo(0).IsName("DoorCloseRight"))
                 {
                     doorAnimator1.SetTrigger("Open");
+                    
+                    if (jumpObjectScript != null)
+                    {
+                        jumpObjectScript.OnDoorOpened();
+                        jumpObjectScript.Update();
+                    }
                 }
                 else if (doorAnimator1.GetCurrentAnimatorStateInfo(0).IsName("DoorOpenRight"))
                 {
