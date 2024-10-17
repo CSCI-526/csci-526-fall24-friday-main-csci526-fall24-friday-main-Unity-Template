@@ -7,12 +7,14 @@ public class DoorControllerRight : MonoBehaviour
     public float interactionDistance1 = 3f;
     private bool doorOpened = false;
     public JumpOnDoorOpen jumpObjectScript;
-    private bool animatorEnabled = false; // 用来跟踪 Animator 是否启用
+    // private bool animatorEnabled = false; // 用来跟踪 Animator 是否启用
 
     void Start()
     {
-        doorAnimator1.enabled = false;  // 游戏开始时禁用 Animator
+        //doorAnimator1.enabled = false;  // 游戏开始时禁用 Animator
     }
+   
+
 
     void Update()
     {
@@ -20,11 +22,11 @@ public class DoorControllerRight : MonoBehaviour
 
         if (distance < interactionDistance1)
         {
-            if (!animatorEnabled) 
-            {
-                doorAnimator1.enabled = true;  // 玩家靠近时启用 Animator
-                animatorEnabled = true;
-            }
+            // if (!animatorEnabled) 
+            // {
+            //     doorAnimator1.enabled = true;  // 玩家靠近时启用 Animator
+            //     animatorEnabled = true;
+            // }
 
             if (Input.GetKeyDown(KeyCode.F))
             {
