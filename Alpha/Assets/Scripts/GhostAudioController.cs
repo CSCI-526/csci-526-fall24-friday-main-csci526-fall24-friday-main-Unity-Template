@@ -43,10 +43,26 @@ public class GhostAudioController : MonoBehaviour
         GameObject[] ghosts = GameObject.FindGameObjectsWithTag("Ghost");
         targetGhost = FindClosestGhost(ghosts);
 
+        // Find player for sanity control
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+
         if (targetGhost != null)
         {
             float distance = Vector3.Distance(transform.position, targetGhost.transform.position);
             PlayAudioForRange(distance);
+            if (p)
+            {
+                PlayerSanity ps = p.GetComponent<PlayerSanity>();
+                if(distance <= 15.0f)
+                {
+                    ps.additionalDecline = 3.0f;
+
+                }
+                else
+                {
+                    ps.additionalDecline = 0.0f;
+                }
+            }
         }
         else
         {

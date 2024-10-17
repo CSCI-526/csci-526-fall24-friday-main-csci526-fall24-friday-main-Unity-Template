@@ -6,6 +6,7 @@ public class PlayerSanity : MonoBehaviour
 {
 
     public float sanityDecline = 1.0f;
+    public float additionalDecline = 0.0f;
     public float playerSanity = 100.0f;
     public TMPro.TextMeshProUGUI textUI;
 
@@ -18,7 +19,7 @@ public class PlayerSanity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerSanity -= sanityDecline * Time.deltaTime;
+        playerSanity -= (sanityDecline + additionalDecline) * Time.deltaTime;
         textUI.text = "Sanity: " + ((int)playerSanity).ToString();
         //print(playerSanity);
     }
