@@ -34,7 +34,6 @@ public class JumpOnDoorOpen : MonoBehaviour
         {
             PlayerSanity ps = p.GetComponent<PlayerSanity>();
             ps.playerSanity -= 10;
-
         }
     }
 

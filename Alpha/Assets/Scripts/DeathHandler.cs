@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;  // 用于场景管理
 using UnityEngine.UI;               // 用于UI控制
@@ -11,25 +12,32 @@ public class DeathHandler : MonoBehaviour
 
     private JumpOnDoorOpen jumpObjectstatus;  // 检测 jumpObject 是否出现
 
-    // Update is called once per frame
     void Start() 
     {
-        deathPanel.SetActive(false);
+        deathPanel.SetActive(false);  // 确保一开始死亡面板不可见
     }
+
     void Update()
     {
-        // 如果 jumpObject 出现并且计时尚未开始
-        if (jumpObjectstatus.jumpObjectAppeared())
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        PlayerSanity ps = p.GetComponent<PlayerSanity>();
+        
+        // 如果 playerSanity 变为 0，启动死亡处理
+        if (ps.playerSanity <= 0 && !deathPanel.activeInHierarchy)  // 防止重复执行
         {
-            Invoke("ShowDeathMessage", delayBeforeDeath);  // 在 delayBeforeDeath 秒后显示死亡信息
+            deathPanel.SetActive(true);  // 显示死亡通知面板
+            StartCoroutine(HandleDeath());  // 启动协程处理返回主菜单
         }
     }
 
-    // 显示死亡通知
-    void ShowDeathMessage()
+    // 协程处理死亡后的流程
+    private IEnumerator HandleDeath()
     {
-        deathPanel.SetActive(true);  // 激活死亡通知 UI
-        Invoke("ReturnToMainMenu", 2f);  // 在2秒后返回主菜单
+        // 延迟 delayBeforeDeath 秒后执行返回主菜单操作
+        yield return new WaitForSeconds(delayBeforeDeath);
+
+        // 返回主菜单
+        ReturnToMainMenu();
     }
 
     // 返回主菜单
