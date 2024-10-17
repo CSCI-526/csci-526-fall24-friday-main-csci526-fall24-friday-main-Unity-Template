@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: UVMaterial
-  m_Shader: {fileID: 4800000, guid: 77e3a35288ccc4f35806eb5c14b88d51, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4d1fd264d736b4c318e93c85fb058c28, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -82,6 +82,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightDirection: {r: 0.9449481, g: -0, b: 0.32722068, a: 0}
-    - _LightPosition: {r: 11.251657, g: 1.08, b: -0.42580113, a: 0}
+    - _LightDirection: {r: -0.95105714, g: -0, b: 0.30901527, a: 0}
+    - _LightPosition: {r: -3.010583, g: 1.08, b: 1.0574026, a: 0}
   m_BuildTextureStacks: []
