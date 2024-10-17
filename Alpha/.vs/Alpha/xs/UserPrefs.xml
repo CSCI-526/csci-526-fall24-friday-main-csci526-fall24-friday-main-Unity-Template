@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{AD9B82C9-BDBC-1B2C-4E33-5606A72167FA}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GhostAudioController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ElevatorButtonControl.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerSanity.cs" Line="27" Column="1" />
       <File FileName="Assets/Scripts/PlayerInventory.cs" />
       <File FileName="Assets/Scripts/PlayerMovement.cs" />
       <File FileName="Assets/Scripts/GhostAudioController.cs" Line="63" Column="49" />
-      <File FileName="Assets/Scripts/JumpOnDoorOpen.cs" Line="37" Column="1" />
+      <File FileName="Assets/Scripts/JumpOnDoorOpen.cs" />
+      <File FileName="Assets/Scripts/ElevatorButtonControl.cs" Line="47" Column="22" />
+      <File FileName="Assets/Scripts/ElevatorControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +16,7 @@
           <Node name="Alpha" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="GhostAudioController.cs" selected="True" />
+                <Node name="ElevatorButtonControl.cs" selected="True" />
               </Node>
             </Node>
           </Node>
