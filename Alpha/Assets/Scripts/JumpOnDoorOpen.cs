@@ -29,6 +29,13 @@ public class JumpOnDoorOpen : MonoBehaviour
     void ActivateJumpObject()
     {
         jumpObject.SetActive(true);
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p)
+        {
+            PlayerSanity ps = p.GetComponent<PlayerSanity>();
+            ps.playerSanity -= 10;
+
+        }
     }
 
     // 这个方法可以被外部调用，设置门打开状态

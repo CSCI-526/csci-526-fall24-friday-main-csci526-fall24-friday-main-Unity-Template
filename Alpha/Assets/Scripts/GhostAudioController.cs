@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class GhostAudioController : MonoBehaviour
 {
-    public float range1 = 30f;
-    public float range2 = 25f;
+    public float range1 = 55f;
+    public float range2 = 35f;
     public float range3 = 20f;
-    public float range4 = 15f;  // Radius for first range
-    public float range5 = 10f; // Radius for second range
-    public float range6 = 5f; // Radius for third range
+    public float range4 = 10f;  // Radius for first range
+    public float range5 = 5f; // Radius for second range
 
     private AudioSource audioSourceRange1;
     private AudioSource audioSourceRange2;
     private AudioSource audioSourceRange3;
     private AudioSource audioSourceRange4;
     private AudioSource audioSourceRange5;
-    private AudioSource audioSourceRange6;
 
     private GameObject targetGhost;
 
@@ -23,14 +21,13 @@ public class GhostAudioController : MonoBehaviour
         // Get all AudioSource components on this GameObject
         AudioSource[] audioSources = GetComponents<AudioSource>();
         
-        if (audioSources.Length >= 6)
+        if (audioSources.Length >= 5)
         {
             audioSourceRange1 = audioSources[0];
             audioSourceRange2 = audioSources[1];
             audioSourceRange3 = audioSources[2];
             audioSourceRange4 = audioSources[3];
             audioSourceRange5 = audioSources[4];
-            audioSourceRange6 = audioSources[5];
 
         }
         else
@@ -113,22 +110,22 @@ public class GhostAudioController : MonoBehaviour
                 audioSourceRange4.Play();
             }
         }
-        else if (distance <= range5 && distance > range6)
+        //else if (distance <= range5 && distance > range6)
+        //{
+        //    if (!audioSourceRange5.isPlaying)
+        //    {
+        //        StopAllAudios();
+        //        Debug.Log("Playing audio for range 5");
+        //        audioSourceRange5.Play();
+        //    }
+        //}
+        else if (distance <= range5)
         {
             if (!audioSourceRange5.isPlaying)
             {
                 StopAllAudios();
-                Debug.Log("Playing audio for range 5");
-                audioSourceRange5.Play();
-            }
-        }
-        else if (distance <= range6)
-        {
-            if (!audioSourceRange6.isPlaying)
-            {
-                StopAllAudios();
                 Debug.Log("Playing audio for range 6");
-                audioSourceRange6.Play();
+                audioSourceRange5.Play();
             }
         }
         else
@@ -147,7 +144,7 @@ public class GhostAudioController : MonoBehaviour
         if (audioSourceRange3.isPlaying) audioSourceRange3.Stop();
         if (audioSourceRange4.isPlaying) audioSourceRange4.Stop();
         if (audioSourceRange5.isPlaying) audioSourceRange5.Stop();
-        if (audioSourceRange6.isPlaying) audioSourceRange6.Stop();
+        //if (audioSourceRange6.isPlaying) audioSourceRange6.Stop();
 
     }
 }
