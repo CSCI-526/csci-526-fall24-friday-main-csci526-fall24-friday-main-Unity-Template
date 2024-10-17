@@ -2,27 +2,39 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public Animator doorAnimator;  // ²Î¿¼ÃÅµÄ Animator
-    public Transform player;       // ²Î¿¼Íæ¼ÒµÄ Transform
-    public float interactionDistance = 3f; // Íæ¼ÒÓëÃÅµÄ½»»¥¾àÀë
+    public Animator doorAnimator;  // å‚è€ƒé—¨çš„ Animator
+    public Transform player;       // å‚è€ƒç©å®¶çš„ Transform
+    public float interactionDistance = 3f; // ç©å®¶ä¸é—¨çš„äº¤äº’è·ç¦»
+    private bool animatorEnabled = false; // è·Ÿè¸ª Animator æ˜¯å¦å·²å¯ç”¨
+
+    void Start()
+    {
+        doorAnimator.enabled = false;  // æ¸¸æˆå¼€å§‹æ—¶ç¦ç”¨ Animator
+    }
 
     void Update()
     {
-        // ¼ì²âÍæ¼ÒÓëÃÅµÄ¾àÀë
+        // æ£€æµ‹ç©å®¶ä¸é—¨çš„è·ç¦»
         float distance = Vector3.Distance(player.position, transform.position);
 
-        if (distance < interactionDistance)  // Èç¹ûÍæ¼Ò¿¿½üÃÅ
+        if (distance < interactionDistance)  // å¦‚æœç©å®¶é è¿‘é—¨
         {
-            if (Input.GetKeyDown(KeyCode.F)) // °´ÏÂ F ¼ü
+            if (!animatorEnabled) 
             {
-                // ¼ì²éµ±Ç°¶¯»­×´Ì¬
+                doorAnimator.enabled = true;  // å¯ç”¨ Animator
+                animatorEnabled = true;
+            }
+
+            if (Input.GetKeyDown(KeyCode.F)) // æŒ‰ä¸‹ F é”®
+            {
+                // æ£€æŸ¥å½“å‰åŠ¨ç”»çŠ¶æ€
                 if (doorAnimator.GetCurrentAnimatorStateInfo(0).IsName("DoorCloseLeft"))
                 {
-                    doorAnimator.SetTrigger("Open");  // ¿ªÃÅ
+                    doorAnimator.SetTrigger("Open");  // å¼€é—¨
                 }
                 else if (doorAnimator.GetCurrentAnimatorStateInfo(0).IsName("DoorOpenLeft"))
                 {
-                    doorAnimator.SetTrigger("Close"); // ¹ØÃÅ
+                    doorAnimator.SetTrigger("Close"); // å…³é—¨
                 }
             }
         }

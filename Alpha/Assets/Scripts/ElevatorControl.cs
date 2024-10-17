@@ -8,7 +8,12 @@ public class ElevatorControl : MonoBehaviour
     public float autoCloseDelay = 5f;  // Time in seconds before the door automatically closes
 
     private bool isDoorOpen = false;  // Tracks the current state of the elevator door
-
+     void Start()
+    {
+        // Force the door to start in the closed state when the game begins
+        doorAnimator1.Play("ElevatorDoorClose", 0, 0f);  // Set the Animator to play the closed state immediately
+        isDoorOpen = false;  // Ensure the door is marked as closed
+    }
     void Update()
     {
         // Calculate the distance between the player and the elevator
