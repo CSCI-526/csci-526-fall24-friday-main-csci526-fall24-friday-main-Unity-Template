@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 10885
+  controlID: 11098
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 10886
+  controlID: 11099
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 10887
+  controlID: 11100
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -239,9 +239,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0e0f0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 7cc1ffff54ddfffffeddffff94deffffdadeffff2ae3ffff30fbffff485a0000605a0000
+      m_ExpandedIDs: c8a9ffff44b3ffff98b6ffff7cc1ffff54ddfffffeddffff94deffffdadeffff2ae3ffff30fbffff485a0000605a0000127a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -624,9 +624,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 972.8723, y: 540, z: 0}
+    m_Target: {x: 960, y: 540, z: 0}
     speed: 2
-    m_Value: {x: 972.8723, y: 540, z: 0}
+    m_Value: {x: 960, y: 540, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -672,17 +672,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.007497802, y: 0.023996955, z: -0.00017999552, w: 0.99968415}
+    m_Target: {x: 0.032363895, y: -0.04196565, z: 0.0013600675, w: 0.9985947}
     speed: 2
-    m_Value: {x: 0.0074978, y: 0.02399695, z: -0.00017999548, w: 0.9996839}
+    m_Value: {x: 0.03236387, y: -0.041965615, z: 0.0013600664, w: 0.99859387}
   m_Size:
-    m_Target: 241.72736
+    m_Target: 609.3378
     speed: 2
-    m_Value: 241.72736
+    m_Value: 609.3378
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1.2993501
     m_SpeedNormalized: 0.64949983
@@ -913,7 +913,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -921,15 +921,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: 96
   m_LastProjectPath: /Users/angeliaz/Documents/A_USC_Notes/CSCI526_Fa24/Horror Game/csci526-fall24-friday-main-wet-pants-studios/Alpha
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 36.599976}
-    m_SelectedIDs: 585b0000
-    m_LastClickedID: 23384
+    m_SelectedIDs: 565b0000
+    m_LastClickedID: 23382
     m_ExpandedIDs: 00000000325b0000345b0000365b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -983,9 +983,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 0e0f0000
-    m_LastClickedInstanceID: 3854
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

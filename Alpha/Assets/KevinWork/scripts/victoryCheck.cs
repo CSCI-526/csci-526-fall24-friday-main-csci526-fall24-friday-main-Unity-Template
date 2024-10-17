@@ -5,14 +5,14 @@ using UnityEngine;
 public class victoryCheck : MonoBehaviour
 {
 
-    public GameObject victoryCanvas; // 将类型改为 GameObject
+    public GameObject victoryCanvas; // 锟斤拷锟斤拷锟酵革拷为 GameObject
 
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            victoryCanvas.SetActive(true); // 显示胜利的 Canvas
-            Invoke("QuitGame", 3f);
+            victoryCanvas.SetActive(true); // 锟斤拷示胜锟斤拷锟斤拷 Canvas
+            Invoke("QuitGame", 1f);
         }
     }
 
