@@ -26,10 +26,11 @@ public class Item : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.tag=="Player")
         {
+            Debug.Log("player collision!!!!!!!!!!!!!!!");
             int leftOverItems = inverntoryManager.AddItem(itemName, quantity,sprite,itemDescription);
             if (leftOverItems <= 0)
                 Destroy(gameObject);
