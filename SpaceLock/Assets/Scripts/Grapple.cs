@@ -84,6 +84,14 @@ public class Grapple : MonoBehaviour {
         {
             if (hit.collider != null && hit.collider.gameObject != gameObject && hit.collider.CompareTag("Obstacle"))
             {
+                // Check if the object has a child named "Player"
+                Transform playerChild = hit.collider.transform.Find("Player");
+                if (playerChild != null)
+                {
+                    Debug.Log("Cannot grapple: Object has a child named 'Player'.");
+                    return; // Stop the grapple attempt
+                }
+
                 float distanceToHit = Vector3.Distance(transform.position, hit.point);
                 Debug.Log("Distance to hit: " + distanceToHit);
 
